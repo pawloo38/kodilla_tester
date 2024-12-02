@@ -1,0 +1,4 @@
+rootProject.name = 'kodila-course'
+include 'kodilla-intro'
+include 'kodilla-basic-tests'
+
