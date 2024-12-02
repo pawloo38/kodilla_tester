@@ -21,12 +21,12 @@ public class Application {
             System.out.println("Metoda subtract nia dziala poprawnie dla liczb " + b + " i " + a);
         }
 
-        int multiplicationResult = calculator.multiplication(a);
-        boolean correct3 = ResultChecker.assertEquals(25, multiplicationResult);
+        int powerOfTwoResult = calculator.powerOfTwo(a);
+        boolean correct3 = ResultChecker.assertEquals(25, powerOfTwoResult);
         if (correct3) {
-            System.out.println("Metoda multiplication dziala poprawnie dla liczby " + a);
+            System.out.println("Metoda powerOfTwo dziala poprawnie dla liczby " + a);
         } else {
-            System.out.println("Metoda multiplication nie dziala poprawnie dla liczby " + a);
+            System.out.println("Metoda powerOfTwo nie dziala poprawnie dla liczby " + a);
         }
     }
 }
