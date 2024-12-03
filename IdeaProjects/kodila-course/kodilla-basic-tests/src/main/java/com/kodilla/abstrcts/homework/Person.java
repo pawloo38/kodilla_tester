@@ -33,12 +33,12 @@ public class Person {
         Job engineer = new Engineer(7000, "Projektowanie budynkow", "Inzynier");
         Job doctor = new Doctor(10000, "Leczenie pacjentow", "Lekarz");
 
-        Person person1 = new Person("Krystyna", 30, teacher);
-        Person person2 = new Person("Roman", 40, engineer);
-        Person person3 = new Person("Adam", 35, doctor);
+        Person firstPerson = new Person("Krystyna", 30, teacher);
+        Person secondPerson = new Person("Roman", 40, engineer);
+        Person thirdPerson = new Person("Adam", 35, doctor);
 
-        person1.displayJobResponsibilities();
-        person2.displayJobResponsibilities();
-        person3.displayJobResponsibilities();
+        firstPerson.displayJobResponsibilities();
+        secondPerson.displayJobResponsibilities();
+        thirdPerson.displayJobResponsibilities();
     }
 }
