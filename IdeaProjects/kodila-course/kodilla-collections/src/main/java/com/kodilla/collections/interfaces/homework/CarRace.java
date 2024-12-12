@@ -12,10 +12,10 @@ public class CarRace {
     }
 
     private static void doRace(Car car) {
-        for (int i = 0; i < 3; i++){
+        for (int i = 0; i < 3; i++) {
             car.increaseSpeed();
         }
-        for (int i = 0; i < 2; i++){
+        for (int i = 0; i < 2; i++) {
             car.decreaseSpeed();
         }
         System.out.println("Koncowa predkosc " + car.getClass().getSimpleName() + " to: " + car.getSpeed() + " km/h");

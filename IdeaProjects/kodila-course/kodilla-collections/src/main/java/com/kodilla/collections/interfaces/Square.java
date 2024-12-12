@@ -6,11 +6,11 @@ public class Square implements Shape {
     public Square(double width) {
         this.width = width;
     }
-
+@Override
     public double getArea() {
         return width * width;
     }
-
+@Override
     public double getPerimeter() {
         return 4 * width;
     }
