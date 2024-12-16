@@ -1,35 +1,35 @@
 package com.kodilla.bank.homework;
 
 public class Bank {
-    CashMachine[] cashMachines;
+    static CashMachine[] cashMachines;
     public Bank(int numberOfMachines) {
-        this.cashMachines = new CashMachine[numberOfMachines];
+        cashMachines = new CashMachine[numberOfMachines];
         for (int i = 0; i < numberOfMachines; i++) {
             cashMachines[i] = new CashMachine();
         }
     }
-    public double getTotalBalance() {
+    public static double getTotalBalance() {
         double totalBalance = 0;
         for (CashMachine machine : cashMachines) {
             totalBalance += machine.getBalance();
         }
         return totalBalance;
     }
-    public int getTotalWithdrawalTransactions() {
+    public static int getTotalWithdrawalTransactions() {
         int totalWithdrawals = 0;
         for (CashMachine machine : cashMachines) {
             totalWithdrawals += machine.getWithdrawalCount();
         }
         return totalWithdrawals;
     }
-    public int getTotalDepositTransactions() {
+    public static int getTotalDepositTransactions() {
         int totalDeposits = 0;
         for (CashMachine machine : cashMachines) {
             totalDeposits += machine.getDepositCount();
         }
         return totalDeposits;
     }
-    public double getAverageWithdrawal() {
+    public static double getAverageWithdrawal() {
         int totalWithdrawals = getTotalWithdrawalTransactions();
         if (totalWithdrawals == 0) {
             return 0;
@@ -40,7 +40,7 @@ public class Bank {
         }
         return  sum / totalWithdrawals;
     }
-    public double getAverageDeposit() {
+    public static double getAverageDeposit() {
         int totalDeposits = getTotalDepositTransactions();
         if (totalDeposits == 0) {
             return 0;
