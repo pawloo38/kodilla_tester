@@ -11,16 +11,19 @@ public class School {
         this.name = name;
         this.studentsInClasses = new ArrayList<>();
     }
+
     public String getName() {
         return name;
     }
+
     public List<Integer> getStudentsInClasses() {
         return studentsInClasses;
     }
 
-    public void addClass(int numberOfStudents){
+    public void addClass(int numberOfStudents) {
         studentsInClasses.add(numberOfStudents);
     }
+
     public int getTotalStudents() {
         int total = 0;
         for (int students : studentsInClasses) {
