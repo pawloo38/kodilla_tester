@@ -17,9 +17,11 @@ public class UsersManager {
                 .collect(Collectors.toList());
         return usernames;
     }
+
     public static String getUserName(User user) {
         return user.getUsername();
     }
+
     public static List<User> filterUsersByAge(int age) {
         return UserRepository.getUserList()
                 .stream()

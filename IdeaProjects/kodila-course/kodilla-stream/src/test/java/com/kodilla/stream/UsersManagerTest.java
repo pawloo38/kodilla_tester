@@ -13,11 +13,13 @@ public class UsersManagerTest {
         List<String> expectedUsernames = List.of("Walter White", "Gale Boetticher");
         assertEquals(expectedUsernames, usernames);
     }
+
     @Test
     public void testFilterUsersByAge() {
         List<User> filteredUsers = UsersManager.filterUsersByAge(40);
         assertTrue(filteredUsers.stream().allMatch(user -> user.getAge() > 40));
     }
+
     @Test
     public void testFilterActiveYoungUsers() {
         List<User> filtredUsers = UsersManager.filterActiveYoungUsers();
