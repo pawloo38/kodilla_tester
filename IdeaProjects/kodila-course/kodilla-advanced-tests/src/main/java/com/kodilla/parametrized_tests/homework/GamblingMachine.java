@@ -9,8 +9,6 @@ class GamblingMachine {
     public int howManyWins(Set<Integer> userNumbers) throws InvalidNumbersException {
         validateNumbers(userNumbers);
         Set<Integer> computerNumbers = generateComputerNumbers();
-        System.out.println("User Numbers: " + userNumbers);
-        System.out.println("Computer Numbers: " + computerNumbers);
         int count = 0;
         for (Integer number : userNumbers) {
             if (computerNumbers.contains(number)) {
@@ -21,12 +19,8 @@ class GamblingMachine {
     }
 
     private void validateNumbers(Set<Integer> numbers) throws InvalidNumbersException {
-        int size = numbers.size();
-        if (isNotCorrectSize(numbers)) {
-            throw new InvalidNumbersException("Invalid number count: Expected 6 numbers, but got " + size + ".");
-        }
-        if (isAnyNumberOutOfDeclaredScope(numbers)) {
-            throw new InvalidNumbersException("Numbers must be in the range from 1 to 49.");
+        if (isNotCorrectSize(numbers) || isAnyNumberOutOfDeclaredScope(numbers)) {
+            throw new InvalidNumbersException();
         }
     }
 

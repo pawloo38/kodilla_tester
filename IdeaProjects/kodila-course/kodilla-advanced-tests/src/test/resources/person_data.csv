@@ -1,0 +1,6 @@
+height,weight,expectedBMI
+1.50,45,Underweight
+1.75,68,Normal
+1.80,95,Overweight
+1.60,120,Obese Class III
+1.65,40,Severely underweight
