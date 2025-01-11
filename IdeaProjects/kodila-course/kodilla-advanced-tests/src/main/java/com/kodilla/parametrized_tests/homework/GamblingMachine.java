@@ -4,8 +4,7 @@ import java.util.HashSet;
 import java.util.Random;
 import java.util.Set;
 
-class GamblingMachine {
-
+public class GamblingMachine {
     public int howManyWins(Set<Integer> userNumbers) throws InvalidNumbersException {
         validateNumbers(userNumbers);
         Set<Integer> computerNumbers = generateComputerNumbers();
@@ -18,12 +17,11 @@ class GamblingMachine {
         return count;
     }
 
-    private void validateNumbers(Set<Integer> numbers) throws InvalidNumbersException {
+    void validateNumbers(Set<Integer> numbers) throws InvalidNumbersException {
         if (isNotCorrectSize(numbers) || isAnyNumberOutOfDeclaredScope(numbers)) {
             throw new InvalidNumbersException();
         }
     }
-
 
     private boolean isAnyNumberOutOfDeclaredScope(Set<Integer> numbers) {
         return numbers.stream()

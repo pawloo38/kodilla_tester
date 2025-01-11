@@ -6,7 +6,7 @@ import org.junit.jupiter.params.provider.CsvSource;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 
-public class UserValidatorTestSuite {
+class UserValidatorTestSuite {
     private UserValidator userValidator = new UserValidator();
 
     @ParameterizedTest
@@ -36,4 +36,5 @@ public class UserValidatorTestSuite {
             assertFalse(result);
         }
     }
+
 }
