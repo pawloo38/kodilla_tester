@@ -1,10 +1,11 @@
 package com.kodilla.parametrized_tests.homework;
-
 import java.util.HashSet;
 import java.util.Random;
 import java.util.Set;
 
-public class GamblingMachine {
+
+class GamblingMachine {
+
     public int howManyWins(Set<Integer> userNumbers) throws InvalidNumbersException {
         validateNumbers(userNumbers);
         Set<Integer> computerNumbers = generateComputerNumbers();
@@ -32,7 +33,7 @@ public class GamblingMachine {
         return numbers.size() != 6;
     }
 
-    private Set<Integer> generateComputerNumbers() {
+    Set<Integer> generateComputerNumbers() {
         Set<Integer> numbers = new HashSet<>();
         Random generator = new Random();
         while(numbers.size() < 6) {

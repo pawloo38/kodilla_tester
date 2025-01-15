@@ -5,7 +5,7 @@
  */
 
 plugins {
-    id 'buildlogic.groovy-application-conventions'
+    id 'buildlogic.java-application-conventions'
 }
 
 dependencies {
