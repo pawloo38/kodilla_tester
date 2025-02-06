@@ -18,4 +18,9 @@
       <module name="kodilla_tester.utilities.test" target="21" />
     </bytecodeTargetLevel>
   </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="kodila-course.kodilla-rest-api.test" options="--add-exports java.base/jdk.internal.org.objectweb.asm.util=ALL-UNNAMED" />
+    </option>
+  </component>
 </project>
