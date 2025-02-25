@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/kodilla-basic-tests/kodila-course.kodilla-basic-tests.test.iml" filepath="$PROJECT_DIR$/.idea/modules/kodilla-basic-tests/kodila-course.kodilla-basic-tests.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/kodilla-selenium.iml" filepath="$PROJECT_DIR$/kodilla-selenium.iml" />
     </modules>
   </component>
 </project>
