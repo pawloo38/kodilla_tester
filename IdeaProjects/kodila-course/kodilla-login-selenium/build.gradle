@@ -4,7 +4,8 @@ plugins {
 
 group = 'com.kodilla'
 version = '1.0-SNAPSHOT'
-sourceCompatibility = JavaVersion.VERSION_17
+
+sourceCompatibility = 1.8
 
 repositories {
     mavenCentral()
@@ -14,6 +15,10 @@ dependencies {
     testImplementation platform('org.junit:junit-bom:5.10.0')
     implementation 'org.seleniumhq.selenium:selenium-java:4.1.0'
     testImplementation 'org.junit.jupiter:junit-jupiter'
+    implementation 'com.google.guava:guava:31.1-jre'
+    implementation(group: 'com.github.lewka', name: 'ocular', version: '1.0.5'){
+        exclude group: "net.sf", module: "jargs"
+    }
 }
 
 test {
