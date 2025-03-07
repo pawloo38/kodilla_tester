@@ -37,6 +37,13 @@ public class WalletSteps {
         Assertions.assertThat(cashSlot.getContents()).isEqualTo(amount);
     }
 
+    @Then("the balance of my wallet should be $170")
+    public void the_balance_of_my_wallet_should_be_$170() {
+        Assertions.assertThat(wallet.getBalance())
+                .as("Incorrect wallet balance")
+                .isEqualTo(170);
+    }
+
     @Then("I should not be able to withdraw ${int}")
     public void i_should_not_be_able_to_withdraw_amount(int amount) {
         Assertions.assertThat(cashSlot.getContents()).isEqualTo(0);
@@ -53,7 +60,6 @@ public class WalletSteps {
             wallet.deposit(-amount);
             Assertions.fail("Expected IllegalArgumentException to be thrown");
         } catch (IllegalArgumentException e) {
-
         }
     }
 
