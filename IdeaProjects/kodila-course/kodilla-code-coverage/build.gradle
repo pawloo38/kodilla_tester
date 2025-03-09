@@ -1,0 +1,69 @@
+plugins {
+    id 'java'
+    id 'jacoco'
+    id 'checkstyle'
+    id "com.github.spotbugs" version "6.0.14"
+}
+
+group = 'com.kodilla'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation platform('org.junit:junit-bom:5.10.0')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+}
+
+test {
+    useJUnitPlatform()
+}
+
+checkstyle {
+    toolVersion "8.30"
+    configFile = file('C:/Users/Sebastian/Desktop/kodilla_tester/IdeaProjects/kodila-course/checkstyle.xml')
+}
+
+spotbugs {
+    ignoreFailures = false
+    effort = com.github.spotbugs.snom.Effort.MAX
+    reportLevel = com.github.spotbugs.snom.Confidence.valueOf("HIGH")
+}
+
+spotbugsMain {
+    reports {
+        html {
+            required = true
+            destination = file("$buildDir/reports/spotbugs/main.html")
+        }
+        xml {
+            required = false
+        }
+    }
+}
+
+spotbugsTest {
+    reports {
+        html {
+            required = true
+            destination = file("$buildDir/reports/spotbugs/test.html")
+        }
+        xml {
+            required = false
+        }
+    }
+}
+
+jacocoTestCoverageVerification {
+    violationRules {
+        rule {
+            limit {
+                minimum = 1.0
+            }
+            element = 'CLASS'
+            includes = ['com.kodilla.jacoco.*']
+        }
+    }
+}

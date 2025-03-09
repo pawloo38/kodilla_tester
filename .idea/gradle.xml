@@ -24,6 +24,7 @@
             <option value="$PROJECT_DIR$/IdeaProjects/kodila-course/kodilla-advanced-tests" />
             <option value="$PROJECT_DIR$/IdeaProjects/kodila-course/kodilla-advanced-tests2" />
             <option value="$PROJECT_DIR$/IdeaProjects/kodila-course/kodilla-basic-tests" />
+            <option value="$PROJECT_DIR$/IdeaProjects/kodila-course/kodilla-code-coverage" />
             <option value="$PROJECT_DIR$/IdeaProjects/kodila-course/kodilla-collections" />
             <option value="$PROJECT_DIR$/IdeaProjects/kodila-course/kodilla-collections-advanced" />
             <option value="$PROJECT_DIR$/IdeaProjects/kodila-course/kodilla-cucumber" />
@@ -33,6 +34,7 @@
             <option value="$PROJECT_DIR$/IdeaProjects/kodila-course/kodilla-selenium" />
             <option value="$PROJECT_DIR$/IdeaProjects/kodila-course/kodilla-spring-basic" />
             <option value="$PROJECT_DIR$/IdeaProjects/kodila-course/kodilla-stream" />
+            <option value="$PROJECT_DIR$/IdeaProjects/kodila-course/lotek" />
           </set>
         </option>
       </GradleProjectSettings>
