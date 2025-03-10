@@ -7,7 +7,8 @@
       <module name="build-logic.test" target="21" />
       <module name="kodila-course.kodilla-advanced-tests2.main" target="21" />
       <module name="kodila-course.kodilla-advanced-tests2.test" target="21" />
-      <module name="kodila-course.lotek" target="17" />
+      <module name="kodila-course.lotek.main" target="17" />
+      <module name="kodila-course.lotek.test" target="17" />
       <module name="kodilla_tester.app" target="21" />
       <module name="kodilla_tester.app.main" target="21" />
       <module name="kodilla_tester.app.test" target="21" />
