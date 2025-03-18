@@ -27,6 +27,7 @@ public class TaskRepositoryTestSuite {
 
         //Then
         Assertions.assertEquals(1, readTasks.size());
+        Assertions.assertEquals(DESCRIPTION, readTasks.get(0).getDescription());
 
         //CleanUp
         int id = readTasks.get(0).getId();

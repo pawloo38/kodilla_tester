@@ -76,4 +76,16 @@ public class BankTest {
         assertEquals(2, Bank.getTotalDepositTransactions());
         assertEquals(75, Bank.getAverageWithdrawal());
     }
+
+    @Test
+    void testBank() {
+        // Given
+        BankApplication bankApplication = new BankApplication();
+
+        // When
+        bankApplication.testBank();
+
+        // Then
+
+    }
 }

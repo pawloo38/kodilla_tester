@@ -1,9 +1,13 @@
 package com.kodilla.bank.homework;
 
 public class BankApplication {
-    public static void main(String[] args) {
-        Bank bank = new Bank(3);
 
+    public static void main(String[] args) {
+        testBank();
+    }
+
+    public static void testBank() {
+        Bank bank = new Bank(3);
         bank.cashMachines[0].deposit(100);
         bank.cashMachines[1].deposit(200);
         bank.cashMachines[1].withdraw(-50);

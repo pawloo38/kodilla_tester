@@ -1,7 +1,7 @@
 package com.kodilla.hibernate.tasklist.repository;
 
 
-import com.kodilla.hibernate.tasklist.TaskList;
+import com.kodilla.hibernate.tasklist.TaskListDetails;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,11 +21,11 @@ public class TaskListRepositoryTestSuite {
     @Test
     void testFindByListName() {
         // Given
-        TaskList taskList = new TaskList(LIST_NAME, DESCRIPTION);
+        TaskListDetails taskList = new TaskListDetails(LIST_NAME, DESCRIPTION);
         taskListRepository.save(taskList);
 
         // When
-        List<TaskList> readTaskLists = taskListRepository.findByListName(LIST_NAME);
+        List<TaskListDetails> readTaskLists = taskListRepository.findByListName(LIST_NAME);
 
         // Then
         Assertions.assertEquals(1, readTaskLists.size());

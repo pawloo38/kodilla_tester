@@ -50,15 +50,15 @@ public class TaskList {
         this.tasks = tasks;
     }
 
-    private void setId(int id) {
+    public void setId(int id) {
         this.id = id;
     }
 
-    private void setListName(String listName) {
+    public void setListName(String listName) {
         this.listName = listName;
     }
 
-    private void setDescription(String description) {
+    public void setDescription(String description) {
         this.description = description;
     }
 }

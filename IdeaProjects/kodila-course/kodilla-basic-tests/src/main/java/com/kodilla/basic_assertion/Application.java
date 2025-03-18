@@ -29,4 +29,7 @@ public class Application {
             System.out.println("Metoda powerOfTwo nie dziala poprawnie dla liczby " + a);
         }
     }
+
+    public void testCalculator() {
+    }
 }

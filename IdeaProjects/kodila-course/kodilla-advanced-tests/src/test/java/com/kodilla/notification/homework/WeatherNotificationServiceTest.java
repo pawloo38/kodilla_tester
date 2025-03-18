@@ -7,6 +7,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.Mockito.*;
 
 class WeatherNotificationServiceTest {
@@ -89,5 +90,17 @@ class WeatherNotificationServiceTest {
         weatherNotificationService.sendNotificationToLocation(notification, location);
         verify(client, never()).receive(notification);
         verify(secondClient, never()).receive(notification);
+    }
+    @Test
+    void shouldReturnCorrectMessage() {
+        // Given
+        String expectedMessage = "Today's weather is sunny.";
+        WeatherNotification weatherNotification = new WeatherNotification(expectedMessage);
+
+        // When
+        String actualMessage = weatherNotification.getMessage();
+
+        // Then
+        assertEquals(expectedMessage, actualMessage);
     }
 }

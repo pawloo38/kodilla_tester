@@ -1,86 +1,78 @@
 package com.kodilla.hibernate.task;
 
-import com.kodilla.hibernate.tasklist.TaskList;
+import com.kodilla.hibernate.tasklist.TaskListDetails;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
-
-import java.time.LocalDate;
+import java.util.Date;
+import java.util.List;
 
 @Entity
-@Table(name = "TASKS")
 public class Task {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
+
     private String description;
-    private LocalDate created;
+
+    @NotNull
+    private Date created;
+
     private int duration;
+
+    @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @JoinColumn(name = "TASK_FINANCIAL_DETAILS_ID")
     private TaskFinancialDetails taskFinancialDetails;
-    private TaskList taskList;
+
+    @ManyToOne
+    @JoinColumn(name = "TASK_LIST_ID")
+    private TaskListDetails taskList;
 
     public Task() {
     }
 
     public Task(String description, int duration) {
         this.description = description;
-        this.created = LocalDate.now();
+        this.created = new Date();
         this.duration = duration;
     }
-@ManyToOne
-@JoinColumn(name = "TASKLIST_ID")
-    public TaskList getTaskList() {
-        return taskList;
-    }
 
-    public void setTaskList(TaskList taskList) {
-        this.taskList = taskList;
-    }
-
-    @Id
-    @GeneratedValue
-    @NotNull
-    @Column(name = "ID", unique = true)
     public int getId() {
         return id;
-    }
-
-    @Column(name = "DESCRIPTION")
-    public String getDescription() {
-        return description;
-    }
-
-    @NotNull
-    @Column(name = "CREATED")
-    public LocalDate getCreated() {
-        return created;
-    }
-
-    @Column(name = "DURATION")
-    public int getDuration() {
-        return duration;
-    }
-
-    @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-    @JoinColumn(name = "TASKS_FINANCIALS_ID")
-    public TaskFinancialDetails getTaskFinancialDetails() {
-        return taskFinancialDetails;
-    }
-
-    public void setTaskFinancialDetails(TaskFinancialDetails taskFinancialDetails) {
-        this.taskFinancialDetails = taskFinancialDetails;
     }
 
     public void setId(int id) {
         this.id = id;
     }
 
+    public String getDescription() {
+        return description;
+    }
+
     public void setDescription(String description) {
         this.description = description;
     }
 
-    public void setCreated(LocalDate created) {
+    public Date getCreated() {
+        return created;
+    }
+
+    public void setCreated(Date created) {
         this.created = created;
+    }
+
+    public int getDuration() {
+        return duration;
     }
 
     public void setDuration(int duration) {
         this.duration = duration;
+    }
+
+    public TaskFinancialDetails getTaskFinancialDetails() {
+        return taskFinancialDetails;
+    }
+
+    public void setTaskFinancialDetails(TaskFinancialDetails taskFinancialDetails) {
+        this.taskFinancialDetails = taskFinancialDetails;
     }
 }

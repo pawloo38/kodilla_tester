@@ -1,13 +1,19 @@
 public class AdvCalculator {
+    private final UserDialogs userDialogs;
+
+    public AdvCalculator(UserDialogs userDialogs) {
+        this.userDialogs = userDialogs;
+    }
+
     public double calculate() {
-        String userSelected = UserDialogs.getUserSelection();
-        int a = UserDialogs.getValue();
-        int b = UserDialogs.getValue();
+        String userSelected = userDialogs.getUserSelection();
+        int a = userDialogs.getValue();
+        int b = userDialogs.getValue();
         return switch (userSelected) {
-            case "ADD" -> a + b;
-            case "SUB" -> a - b;
-            case "DIV" -> a / b;
-            case "MUL" -> a * b;
+            case "A" -> a + b;
+            case "S" -> a - b;
+            case "D" -> a / b;
+            case "M" -> a * b;
             default -> 0;
         };
     }
