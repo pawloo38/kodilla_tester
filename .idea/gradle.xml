@@ -10,6 +10,7 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/kodilla-testcontainers" />
             <option value="$PROJECT_DIR$/lib" />
           </set>
         </option>
@@ -34,6 +35,7 @@
             <option value="$PROJECT_DIR$/IdeaProjects/kodila-course/kodilla-selenium" />
             <option value="$PROJECT_DIR$/IdeaProjects/kodila-course/kodilla-spring-basic" />
             <option value="$PROJECT_DIR$/IdeaProjects/kodila-course/kodilla-stream" />
+            <option value="$PROJECT_DIR$/IdeaProjects/kodila-course/kodilla-testcontainers" />
             <option value="$PROJECT_DIR$/IdeaProjects/kodila-course/lotek" />
           </set>
         </option>

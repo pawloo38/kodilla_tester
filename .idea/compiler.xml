@@ -12,6 +12,8 @@
       <module name="kodilla_tester.app" target="21" />
       <module name="kodilla_tester.app.main" target="21" />
       <module name="kodilla_tester.app.test" target="21" />
+      <module name="kodilla_tester.kodilla-testcontainers.main" target="17" />
+      <module name="kodilla_tester.kodilla-testcontainers.test" target="17" />
       <module name="kodilla_tester.list" target="21" />
       <module name="kodilla_tester.list.main" target="21" />
       <module name="kodilla_tester.list.test" target="21" />

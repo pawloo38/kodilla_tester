@@ -13,3 +13,5 @@ plugins {
 
 rootProject.name = 'kodilla_tester'
 include('lib')
+include 'kodilla-testcontainers'
+
